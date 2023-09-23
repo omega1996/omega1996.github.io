@@ -5,6 +5,7 @@
       <h1>
         Ivan Riazanov
       </h1>
+      <h2>Frontend Developer</h2>
     </div>
     <div class="app__background">
       <div class="app__bg-clip">
@@ -166,16 +167,15 @@
 <style scoped lang="scss">
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 
-  50% {
-    background-position: 100% 50%;
-  }
+
 
   100% {
-    background-position: 0% 50%;
+    background-position: 0 100%;
   }
+
 }
 
 .app {
@@ -196,20 +196,27 @@
       color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
-      background-image:  radial-gradient(circle at 250%, #333, #333 50%, #7b7b7b 75%, #333 75%);
-      background-size: 400% 400%;
-      background-position: center;
-      animation: gradient 15s ease infinite;
+      background-image: radial-gradient(circle at bottom, #333, #333 50%, #7b7b7b 75%, #333 75%);
+      background-size: 100% 400%;
+      // background-position: center;
+      animation: gradient 23.1406s ease infinite;
     }
   }
 
   &__name {
     z-index: 2;
     position: absolute;
+    font-family: 'Roboto Mono';
+    font-weight: 600;
     left: 2em;
-    margin: 0;
-    padding: 0;
-    top: 2em
+
+    top: 2em;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+
+    }
   }
 }
 </style>
