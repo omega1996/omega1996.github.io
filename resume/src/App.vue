@@ -6,6 +6,57 @@
         Ivan Riazanov
       </h1>
       <h2>Frontend Developer</h2>
+      <p>
+        {{ age }} years, male
+      </p>
+      <p>
+        Developer with {{ experience }}+ years of experience in developing and maintaining web applications.
+      </p>
+      <p>
+        Reasonable, solution oriented team-player with developed soft skills and willingness to learn and share.
+      </p>
+      <div>
+        <ul>
+          <li>Web applications of any complexity</li>
+          <li>Made a lot of MVPs</li>
+          <li>Telegram chat bots</li>
+          <li>Have Masters degree in Information Technology</li>
+        </ul>
+      </div>
+      <h2>
+        Tech stack:
+      </h2>
+      <div>
+        <ul>
+          <li>
+            TypeScript, JavaScript, Python
+          </li>
+          <li>
+            Git, Jira, Confluence
+          </li>
+          <li>
+            VSCode
+          </li>
+        </ul>
+      </div>
+      <h2>
+        Experience:
+      </h2>
+      <div>
+        <ul>
+          <li>
+            Heyscribe
+          </li>
+          <li>
+            EBAC online
+          </li>
+          <li>
+            Napoleon IT
+          </li>
+        </ul>
+      </div>
+
+
     </div>
     <div class="app__background">
       <div class="app__bg-clip">
@@ -159,9 +210,27 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 
 
+const age = computed(() => {
+  const dateNow = new Date()
+  const myAge = new Date('1996-03-31')
+  dateNow.getMonth() < myAge.getMonth()
+  // @ts-ignore
+  const age = dateNow.getFullYear() - myAge.getFullYear() - (dateNow.getMonth() < myAge.getMonth() || (dateNow.getMonth() === myAge.getMonth() && dateNow.getDate() < myAge.getDate()));
+  return age;
+})
 
+
+const experience = computed(() => {
+  const dateNow = new Date()
+  const myAge = new Date('2018-09-15')
+  dateNow.getMonth() < myAge.getMonth()
+  // @ts-ignore
+  const age = dateNow.getFullYear() - myAge.getFullYear() - (dateNow.getMonth() < myAge.getMonth() || (dateNow.getMonth() === myAge.getMonth() && dateNow.getDate() < myAge.getDate()));
+  return age;
+})
 
 </script>
 <style scoped lang="scss">
@@ -196,10 +265,10 @@
       color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
-      background-image: radial-gradient(circle at bottom, #333, #333 50%, #7b7b7b 75%, #333 75%);
+      background-image: radial-gradient(circle at bottom, #262626, #262626 50%, #7b7b7b 75%, #262626 75%);
       background-size: 100% 400%;
       // background-position: center;
-      animation: gradient 23.1406s ease infinite;
+      animation: gradient 15s ease infinite;
     }
   }
 
@@ -211,6 +280,7 @@
     left: 2em;
 
     top: 2em;
+    width: calc(100% - 4em);
 
     h1 {
       margin: 0;
