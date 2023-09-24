@@ -1,47 +1,85 @@
 
 <template>
   <div class="app">
+    <div class="app__name mobile">
+      <p class="app__header">
+        {{ nameSymbolsMobile }}
+      </p>
+    </div>
+    <div class="app__name desktop">
+      <p class="app__header">
+        {{ nameSymbols }}
+      </p>
+    </div>
     <div class="app__name">
-      <h1>
-        Ivan Riazanov
-      </h1>
-      <h2>Frontend Developer</h2>
+      <p>Frontend Developer</p>
       <p>
         {{ age }} years, male
       </p>
       <p>
-        Developer with {{ experience }}+ years of experience in developing and maintaining web applications.
+        Developer with <span>{{ experience }}+ years</span> of experience in developing and maintaining web applications.
       </p>
       <p>
         Reasonable, solution oriented team-player with developed soft skills and willingness to learn and share.
       </p>
       <div>
         <ul>
-          <li>Web applications of any complexity</li>
-          <li>Made a lot of MVPs</li>
-          <li>Telegram chat bots</li>
-          <li>Have Masters degree in Information Technology</li>
+          <li>
+            web applications of any complexity <span class="comment">//social networks, online stores</span>
+          </li>
+          <li>
+            made a lot of <span>MVP</span>s <span class="comment">//pet projects, demo applications, hackathon
+              apps</span>
+          </li>
+          <li>
+            won several hackathons with <span>LateDev</span> team
+          </li>
+          <li>
+            telegram <span>chat bots</span>
+          </li>
+          <li>
+            have Masters degree in <span>Information Technology</span><span class="comment"> //specialization in machine
+              learning</span>
+          </li>
         </ul>
       </div>
-      <h2>
+      <p>
         Tech stack:
-      </h2>
+      </p>
       <div>
         <ul>
           <li>
-            TypeScript, JavaScript, Python
+            languages: <span>TypeScript, JavaScript, Python</span>
           </li>
           <li>
-            Git, Jira, Confluence
+            frameworks: <span>Vue.js, Quasar, FastAPI</span>
           </li>
           <li>
-            VSCode
+            storages: <span>Pinia, Vuex</span>
+          </li>
+          <li>
+            databases: <span>PostgreSQL, SQLite</span>
+          </li>
+          <li>
+            markup: <span>HTML, CSS, SCSS, SASS, Less</span>
+          </li>
+          <li>
+            bundlers <span>Webpack, Gulp, Vite </span>
+          </li>
+          <li>
+            runtime_builders: <span>Bun, Node.js</span>
+          </li>
+          <li>
+            team_work: <span>Git, Jira, Confluence</span>
+          </li>
+          <li>
+            IDE: <span>VSCode</span>
           </li>
         </ul>
       </div>
-      <h2>
+      <p>
         Experience:
-      </h2>
+      </p>
       <div>
         <ul>
           <li>
@@ -213,6 +251,10 @@
 import { computed } from 'vue';
 
 
+const nameSymbols = `d888888b db    db  .d8b.  d8b   db   d8888b. d888888b  .d8b.  d88888D  .d8b.  d8b   db  .d88b.  db    db \n  \`88\'   88    88 d8\' \`8b 888o  88   88  \`8D   \`88\'   d8\' \`8b YP  d8\' d8\' \`8b 888o  88 .8P  Y8. 88    88 \n   88    Y8    8P 88ooo88 88V8o 88   88oobY\'    88    88ooo88    d8\'  88ooo88 88V8o 88 88    88 Y8    8P \n   88    \`8b  d8\' 88~~~88 88 V8o88   88\`8b      88    88~~~88   d8\'   88~~~88 88 V8o88 88    88 \`8b  d8\' \n  .88.    \`8bd8\'  88   88 88  V888   88 \`88.   .88.   88   88  d8\' db 88   88 88  V888 \`8b  d8\'  \`8bd8\'  \nY888888P    YP    YP   YP VP   V8P   88   YD Y888888P YP   YP d88888P YP   YP VP   V8P  \`Y88P\'     YP`
+
+const nameSymbolsMobile = `d888888b db    db  .d8b.  d8b   db \n  \`88\'   88    88 d8\' \`8b 888o  88 \n   88    Y8    8P 88ooo88 88V8o 88 \n   88    \`8b  d8\' 88~~~88 88 V8o88 \n  .88.    \`8bd8\'  88   88 88  V888 \nY888888P    YP    YP   YP VP   V8P \n                                   \n                                   \nd8888b. d888888b  .d8b.  d88888D  .d8b.  d8b   db  .d88b.  db    db \n88  \`8D   \`88\'   d8\' \`8b YP  d8\' d8\' \`8b 888o  88 .8P  Y8. 88    88 \n88oobY\'    88    88ooo88    d8\'  88ooo88 88V8o 88 88    88 Y8    8P \n88\`8b      88    88~~~88   d8\'   88~~~88 88 V8o88 88    88 \`8b  d8\' \n88 \`88.   .88.   88   88  d8\' db 88   88 88  V888 \`8b  d8\'  \`8bd8\'  \n88   YD Y888888P YP   YP d88888P YP   YP VP   V8P  \`Y88P\'     YP`
+
 const age = computed(() => {
   const dateNow = new Date()
   const myAge = new Date('1996-03-31')
@@ -265,28 +307,96 @@ const experience = computed(() => {
       color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
-      background-image: radial-gradient(circle at bottom, #262626, #262626 50%, #7b7b7b 75%, #262626 75%);
+      background-image: radial-gradient(circle at bottom, #262626, #262626 50%, #535353 75%, #262626 75%);
       background-size: 100% 400%;
       // background-position: center;
       animation: gradient 15s ease infinite;
     }
   }
 
+  &__header {
+    text-wrap: nowrap;
+    white-space: pre;
+  }
+
   &__name {
     z-index: 2;
-    position: absolute;
+    position: relative;
     font-family: 'Roboto Mono';
     font-weight: 600;
-    left: 2em;
-
-    top: 2em;
+    padding: 2em;
+    padding-bottom: 0;
     width: calc(100% - 4em);
+
+    color: #98d6f7;
+
+    span {
+      color: #bd9178;
+    }
+
+    span.comment {
+      color: #6A9955;
+    }
+
+    p {
+      background-color: #010215;
+    }
+
+    li {
+
+      list-style-type: none;
+
+      span {
+        background-color: #010215;
+      }
+    }
+
+    li:before {
+      content: "-";
+      text-indent: -5px;
+    }
 
     h1 {
       margin: 0;
       padding: 0;
-
     }
   }
 }
+
+
+.mobile{
+
+
+
+  @media only screen and (max-width: 1100px){
+    display: block;
+  }
+
+  @media only screen and (min-width: 1101px){
+    display: none;
+  }
+
+  @media only screen and (max-width: 700px){
+    font-size: 0.75em;
+  }
+
+  @media only screen and (max-width: 520px){
+    font-size: 0.5em;
+  }
+
+  @media only screen and (max-width: 350px){
+    font-size: 0.4em;
+  }
+}
+
+.desktop{
+  @media only screen and (max-width: 1100px){
+    display: none;
+  }
+
+  @media only screen and (min-width: 1101px){
+    display: block;
+  }
+}
+
 </style>
