@@ -64,7 +64,10 @@
             markup: <span>HTML, CSS, SCSS, SASS, Less</span>
           </li>
           <li>
-            bundlers <span>Webpack, Gulp, Vite </span>
+            testing: <span>Jest</span>
+          </li>
+          <li>
+            bundlers: <span>Webpack, Gulp, Vite </span>
           </li>
           <li>
             runtime_builders: <span>Bun, Node.js</span>
@@ -324,7 +327,7 @@ const experience = computed(() => {
     position: relative;
     font-family: 'Roboto Mono';
     font-weight: 600;
-    padding: 2em;
+    padding: 2rem;
     padding-bottom: 0;
     width: calc(100% - 4em);
 
@@ -340,6 +343,7 @@ const experience = computed(() => {
 
     p {
       background-color: #010215;
+      width: fit-content;
     }
 
     li {
