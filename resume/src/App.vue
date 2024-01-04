@@ -81,20 +81,75 @@
         </ul>
       </div>
       <p>
-        Experience:
+        Work experience:
       </p>
       <div>
-        <ul>
-          <li>
-            Heyscribe
-          </li>
-          <li>
-            EBAC online
-          </li>
-          <li>
-            Napoleon IT
-          </li>
-        </ul>
+        <Accordion title="Heyscribe" comment="02.2023 - 11.2023. #1 Productivity app at ProductHunt">
+          <ul>
+            <li>&nbsp;<a target="_blank" href="https://my.heyscribe.com">my.heyscribe.com
+              </a>
+            </li>
+            <li>
+              Created web application and frontend infrastructure from scratch
+            </li>
+            <li>
+              Made pixel perfect markup
+            </li>
+            <li>
+              Created a lot of components
+            </li>
+            <li>
+              Managed GitLab repository, including CI/CD setup using AWS
+            </li>
+            <li>
+              Rewrote pure Vue 3 (vite + pinia + ts) app to quasar SSR
+            </li>
+            <li>
+              Successfully launched MPV
+            </li>
+          </ul>
+
+        </Accordion>
+        <Accordion title="EBAC online" comment="10.2021 -  11.2022. #2 Ed-tech in LATAM">
+          <ul>
+
+            <li>&nbsp;<a target="_blank" href="https://ebaconline.com.br/">ebaconline.com.br
+              </a>
+            </li>
+            <li>
+              Made a lot of UI-kit components (storybook)
+            </li>
+            <li>
+              Feature development (notes component, visual sign editor etc.)
+            </li>
+            <li>
+              Redesign, refactoring, code-review
+            </li>
+            <li>
+              Pixel perfect markup
+            </li>
+            <li>
+              Holding daily meetings, teamlead and PM support
+            </li>
+            <li>
+              Assistance in establishing management processes
+            </li>
+          </ul>
+
+
+        </Accordion>
+        <Accordion title="Napoleon IT" comment="01.2019 - 10.2021">
+          <ul>
+            <li>Machine-learning based platform development</li>
+            <li>Full-Stack (Backend and frontend) development</li>
+            <li>Management optimization </li>
+            <li>Data analytics </li>
+            <li>Creation of several machine learning based MVPs </li>
+            <li>Creation of educational program for newbies in frontend </li>
+            <li>Leading 2 developers </li>
+            <li>Cust-dev, code-review, repository management </li>
+          </ul>
+        </Accordion>
       </div>
 
 
@@ -252,6 +307,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import Accordion from './components/Accordion.vue'
 
 
 const nameSymbols = `d888888b db    db  .d8b.  d8b   db   d8888b. d888888b  .d8b.  d88888D  .d8b.  d8b   db  .d88b.  db    db \n  \`88\'   88    88 d8\' \`8b 888o  88   88  \`8D   \`88\'   d8\' \`8b YP  d8\' d8\' \`8b 888o  88 .8P  Y8. 88    88 \n   88    Y8    8P 88ooo88 88V8o 88   88oobY\'    88    88ooo88    d8\'  88ooo88 88V8o 88 88    88 Y8    8P \n   88    \`8b  d8\' 88~~~88 88 V8o88   88\`8b      88    88~~~88   d8\'   88~~~88 88 V8o88 88    88 \`8b  d8\' \n  .88.    \`8bd8\'  88   88 88  V888   88 \`88.   .88.   88   88  d8\' db 88   88 88  V888 \`8b  d8\'  \`8bd8\'  \nY888888P    YP    YP   YP VP   V8P   88   YD Y888888P YP   YP d88888P YP   YP VP   V8P  \`Y88P\'     YP`
@@ -305,6 +361,13 @@ const experience = computed(() => {
 
   &__bg-clip {
     word-break: break-all;
+
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 
     @supports (background-clip:text) or (-webkit-background-clip:text) {
       color: transparent;
@@ -368,39 +431,38 @@ const experience = computed(() => {
 }
 
 
-.mobile{
+.mobile {
 
 
 
-  @media only screen and (max-width: 1100px){
+  @media only screen and (max-width: 1100px) {
     display: block;
   }
 
-  @media only screen and (min-width: 1101px){
+  @media only screen and (min-width: 1101px) {
     display: none;
   }
 
-  @media only screen and (max-width: 700px){
+  @media only screen and (max-width: 700px) {
     font-size: 0.75em;
   }
 
-  @media only screen and (max-width: 520px){
+  @media only screen and (max-width: 520px) {
     font-size: 0.5em;
   }
 
-  @media only screen and (max-width: 350px){
+  @media only screen and (max-width: 350px) {
     font-size: 0.4em;
   }
 }
 
-.desktop{
-  @media only screen and (max-width: 1100px){
+.desktop {
+  @media only screen and (max-width: 1100px) {
     display: none;
   }
 
-  @media only screen and (min-width: 1101px){
+  @media only screen and (min-width: 1101px) {
     display: block;
   }
 }
-
 </style>
