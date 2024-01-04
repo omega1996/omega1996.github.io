@@ -140,14 +140,29 @@
         </Accordion>
         <Accordion title="Napoleon IT" comment="01.2019 - 10.2021">
           <ul>
-            <li>Machine-learning based platform development</li>
-            <li>Full-Stack (Backend and frontend) development</li>
-            <li>Management optimization </li>
-            <li>Data analytics </li>
-            <li>Creation of several machine learning based MVPs </li>
-            <li>Creation of educational program for newbies in frontend </li>
-            <li>Leading 2 developers </li>
-            <li>Cust-dev, code-review, repository management </li>
+            <li>
+              Machine-learning based platform development
+            </li>
+            <li>
+              Full-Stack (Backend and frontend) development
+            </li>
+            <li>
+              Management optimization </li>
+            <li>
+              Data analytics 
+            </li>
+            <li>
+              Creation of several machine learning based MVPs 
+            </li>
+            <li>
+              Creation of educational program for newbies in frontend 
+            </li>
+            <li>
+              Leading 2 developers 
+            </li>
+            <li>
+              Cust-dev, code-review, repository management 
+            </li>
           </ul>
         </Accordion>
       </div>
