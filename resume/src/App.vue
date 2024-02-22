@@ -39,7 +39,7 @@
           <li>
             won several hackathons with <Hint>LateDev
               <template #hint>
-                <a href="https://github.com/Late-Dev" target="_blank">github.com/Late-Dev</a>
+                <a href="https://github.com/Late-Dev" @click.stop target="_blank">github.com/Late-Dev</a>
               </template>
             </Hint> team
           </li>
@@ -103,7 +103,7 @@
       <div>
         <Accordion title="Heyscribe" comment="02.2023 - 11.2023. #1 Productivity app at ProductHunt">
           <ul>
-            <li>&nbsp;<a target="_blank" href="https://my.heyscribe.com">my.heyscribe.com
+            <li>&nbsp;<a target="_blank" @click.stop href="https://my.heyscribe.com">my.heyscribe.com
               </a>
             </li>
             <li>
@@ -130,7 +130,7 @@
         <Accordion title="EBAC online" comment="10.2021 -  11.2022. #2 Ed-tech in LATAM">
           <ul>
 
-            <li>&nbsp;<a target="_blank" href="https://ebaconline.com.br/">ebaconline.com.br
+            <li>&nbsp;<a @click.stop target="_blank" href="https://ebaconline.com.br/">ebaconline.com.br
               </a>
             </li>
             <li>
@@ -189,15 +189,16 @@
       <div>
         <Accordion title="Smart Go Board" comment="open-source hardware startup">
           <ul>
-            <li>&nbsp;<a href="https://www.instagram.com/smart.go.board/">Instagram</a></li>
+            <li>&nbsp;<a @click.stop target="_blank" href="https://www.instagram.com/smart.go.board/">Instagram</a></li>
             <li> I created the schematics, PCB and code by myself.</li>
           </ul>
         </Accordion>
         <Accordion title="TotalBattle" comment="open-source selenium game automation">
           <ul>
-            <li>&nbsp;<a target="_blank" href="https://github.com/orgs/TBCounter/repositories">Source</a>
+            <li>&nbsp;<a @click.stop target="_blank" href="https://github.com/orgs/TBCounter/repositories">Source</a>
             </li>
-            <li>&nbsp;<a target="_blank" href="https://totalbattle.omegasoft.keenetic.name/">Application</a></li>
+            <li>&nbsp;<a @click.stop target="_blank" href="https://totalbattle.omegasoft.keenetic.name/">Application</a>
+            </li>
             <li>
               Created whole project from scratch
             </li>
@@ -214,8 +215,8 @@
         </Accordion>
         <Accordion title="Cashflow" comment="Telegram mini-app for financial management">
           <ul>
-            <li>&nbsp;<a href="https://github.com/Late-Dev/Cashflow">Source</a></li>
-            <li>&nbsp;<a href="https://t.me/keepcashflowbot">Try bot</a></li>
+            <li>&nbsp;<a @click.stop target="_blank" href="https://github.com/Late-Dev/Cashflow">Source</a></li>
+            <li>&nbsp;<a @click.stop target="_blank" href="https://t.me/keepcashflowbot">Try bot</a></li>
             <li>
               Created bot and mini-app from scratch
             </li>
@@ -229,7 +230,7 @@
         </Accordion>
         <Accordion title="Subsby" comment="Telegram bot for video subtitles">
           <ul>
-            <li>&nbsp;<a href="https://t.me/subsby_bot">Try bot</a></li>
+            <li>&nbsp;<a @click.stop target="_blank" href="https://t.me/subsby_bot">Try bot</a></li>
             <li> AI-based subtitles generation</li>
             <li> Created telegram bot from scratch</li>
           </ul>
