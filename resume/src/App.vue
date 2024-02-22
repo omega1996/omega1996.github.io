@@ -4,7 +4,7 @@
     <Header></Header>
     <div class="app">
       <div>
-        <a target="_blank" href="../public/Resume.pdf">Download resume</a>
+        <a target="_blank" href="/Resume.pdf">Download resume</a>
       </div>
       <div>
 
@@ -187,6 +187,12 @@
         Pet projects:
       </p>
       <div>
+        <Accordion title="Smart Go Board" comment="open-source hardware startup">
+          <ul>
+            <li>&nbsp;<a href="https://www.instagram.com/smart.go.board/">Instagram</a></li>
+            <li> I created the schematics, PCB and code by myself.</li>
+          </ul>
+        </Accordion>
         <Accordion title="TotalBattle" comment="open-source selenium game automation">
           <ul>
             <li>&nbsp;<a target="_blank" href="https://github.com/orgs/TBCounter/repositories">Source</a>
