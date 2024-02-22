@@ -17,7 +17,7 @@
 import { ref } from 'vue';
 
 
-const opened = ref(false)
+const opened = ref(true)
 
 type Props = {
   title: string,

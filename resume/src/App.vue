@@ -3,12 +3,24 @@
   <div>
     <Header></Header>
     <div class="app">
+      <div>
+        <a target="_blank" href="../public/Resume.pdf">Download resume</a>
+      </div>
+      <div>
+
+        <a href="https://github.com/omega1996" target="_blank">My GitHub</a>
+      </div>
       <p>Frontend Developer</p>
       <p>
         {{ age }} years, male
       </p>
       <p>
-        Developer with <span>{{ experience }}+ years</span> of experience in developing and maintaining web applications.
+        Developer with <Hint :text="'Since ' + new Date('2018-09-15').toLocaleDateString()">{{ experience }}+ years</Hint>
+        of
+        experience in
+        developing and
+        maintaining web
+        applications.
       </p>
       <p>
         Reasonable, solution oriented team-player with developed soft skills and willingness to learn and share.
@@ -16,20 +28,27 @@
       <div>
         <ul>
           <li>
-            web applications of any complexity <span class="comment">//social networks, online stores</span>
+            web applications of any complexity <span class="comment">//social networks, online stores, any-management
+              systems</span>
           </li>
           <li>
-            made a lot of <span>MVP</span>s <span class="comment">//pet projects, demo applications, hackathon
+            made a lot of <Hint text="Minimal Viable Product">MVP</Hint>s <span class="comment">//pet projects, demo
+              applications, hackathon
               apps</span>
           </li>
           <li>
-            won several hackathons with <span>LateDev</span> team
+            won several hackathons with <Hint>LateDev
+              <template #hint>
+                <a href="https://github.com/Late-Dev" target="_blank">github.com/Late-Dev</a>
+              </template>
+            </Hint> team
           </li>
           <li>
-            telegram <span>chat bots</span>
+            telegram <Hint text="Chat interface and mini-apps">chat bots</Hint>
           </li>
           <li>
-            have Masters degree in <span>Information Technology</span><span class="comment"> //specialization in machine
+            have Masters degree in <Hint text="Bachelors degree in electronics (a.k.a. engineer)">Information
+              Technology</Hint><span class="comment"> //specialization in machine
               learning</span>
           </li>
         </ul>
@@ -40,34 +59,41 @@
       <div>
         <ul>
           <li>
-            languages: <span>TypeScript, JavaScript, Python</span>
+            languages: <Hint
+              text="I apply OOP, SOLID, KISS, DRY, and YAGNI principles. I'll help you to design and develop your project.">
+              TypeScript, JavaScript, Python</Hint>
           </li>
           <li>
-            frameworks: <span>Vue.js, Quasar, FastAPI</span>
+            frameworks: <Hint
+              text="I'm good in vanilla JS and Python, but I thrive in frameworks like Vue, Quasar, and FastAPI, have experience in Django, Flask, React, Electron, and more.">
+              Vue.js, Quasar, FastAPI</Hint>
           </li>
           <li>
-            storages: <span>Pinia, Vuex</span>
+            storages: <Hint text="Or any storage you prefer">Pinia, Vuex, Redux Toolkit</Hint>
           </li>
           <li>
-            databases: <span>PostgreSQL, SQLite</span>
+            databases: <Hint text="I know SQL, but mostly use ORM">PostgreSQL, SQLite</Hint>
           </li>
           <li>
-            markup: <span>HTML, CSS, SCSS, SASS, Less</span>
+            markup: <Hint text="Any pre- and post- processor, YAML and markdown. Pixel perfect markup">HTML, CSS, SCSS,
+              SASS, Less</Hint>
           </li>
           <li>
-            testing: <span>Jest</span>
+            testing: <Hint text="Unit tests, End-to-End tests">Jest, Selenium</Hint>
           </li>
           <li>
-            bundlers: <span>Webpack, Gulp, Vite </span>
+            bundlers: <Hint text="npm packaging and deployind to npmjs">Webpack, Gulp, Vite, Rollup</Hint>
           </li>
           <li>
-            runtime_builders: <span>Bun, Node.js</span>
+            runtime_builders: <Hint text="Create projects from scratch with useful package.json">Bun, Node.js</Hint>
           </li>
           <li>
-            team_work: <span>Git, Jira, Confluence</span>
+            team_work: <Hint
+              text="I'll integrate Agile best practices seamlessly into your team's workflow, ensuring efficiency and adaptability.">
+              Git, Jira, Confluence</Hint>
           </li>
           <li>
-            IDE: <span>VSCode</span>
+            IDE: <Hint text="I use open-source and free IDE">VSCode</Hint>
           </li>
         </ul>
       </div>
@@ -157,17 +183,62 @@
           </ul>
         </Accordion>
       </div>
-
+      <p>
+        Pet projects:
+      </p>
+      <div>
+        <Accordion title="TotalBattle" comment="open-source selenium game automation">
+          <ul>
+            <li>&nbsp;<a target="_blank" href="https://github.com/orgs/TBCounter/repositories">Source</a>
+            </li>
+            <li>&nbsp;<a target="_blank" href="https://totalbattle.omegasoft.keenetic.name/">Application</a></li>
+            <li>
+              Created whole project from scratch
+            </li>
+            <li>
+              Several active users every day for about 1 year
+            </li>
+            <li>
+              Backend, frontend, Chrome extension
+            </li>
+            <li>
+              Technologies: FastAPI, Vue, PostgreSQL, docker, pinia
+            </li>
+          </ul>
+        </Accordion>
+        <Accordion title="Cashflow" comment="Telegram mini-app for financial management">
+          <ul>
+            <li>&nbsp;<a href="https://github.com/Late-Dev/Cashflow">Source</a></li>
+            <li>&nbsp;<a href="https://t.me/keepcashflowbot">Try bot</a></li>
+            <li>
+              Created bot and mini-app from scratch
+            </li>
+            <li>
+              Participate in telegram hackathon
+            </li>
+            <li>
+              Project management and communication with team.
+            </li>
+          </ul>
+        </Accordion>
+        <Accordion title="Subsby" comment="Telegram bot for video subtitles">
+          <ul>
+            <li>&nbsp;<a href="https://t.me/subsby_bot">Try bot</a></li>
+            <li> AI-based subtitles generation</li>
+            <li> Created telegram bot from scratch</li>
+          </ul>
+        </Accordion>
+      </div>
+      <p>
+        Support me:
+      </p>
+      <a target="_blank" href="https://www.patreon.com/Omega394">Patreon</a> and
+      <a target="_blank" href="https://boosty.to/omega_soft">Boosty</a>
 
     </div>
     <div class="app__background">
       <Background />
     </div>
-
-
-
-
-
 
   </div>
 </template>
@@ -177,7 +248,7 @@ import { computed } from 'vue';
 import Accordion from './components/Accordion.vue'
 import Background from './components/Background.vue';
 import Header from './components/Header.vue';
-
+import Hint from './components/Hint.vue';
 
 
 const age = computed(() => {
